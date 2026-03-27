@@ -129,7 +129,6 @@ class ReportVerifier(object):
             temp_dict = {}
             temp_dict.update({self.list_report_items[3]: result_check})
             self.dictionary_results[comp].update(temp_dict)
-        print(self.dictionary_results)
 
     def create_report(self):
         string_report = ""
@@ -151,6 +150,7 @@ class ReportVerifier(object):
 
         with open(file=os.path.join(self.report_folder, "report_checker.txt"), mode="w", encoding="utf-8") as report_file:
             report_file.write(string_report)
+        print("Report can be checked in the file {}".format(os.path.join(self.report_folder, "report_checker.txt")))
 
 
 if __name__ == "__main__":
